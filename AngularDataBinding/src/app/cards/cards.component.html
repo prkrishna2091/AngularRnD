@@ -1,0 +1,56 @@
+  <div class="container">
+     <div class="row  ">
+        <div class="col-md-4">
+             <div class="card shadow rounded">
+                <img class="card-img-top" [src]="imgSrc" alt="Card image cap">
+             </div>
+             <div class="card-body bg-light">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             </div>
+        </div>
+        <!--Click Event Binding-->
+       <div class="col-md-4">
+           <div class="card shadow rounded ">
+               <div class="card-header bg-success text-white text-center font-weight-bold"> 
+                      <p>Counter Card</p>
+                      <p>Event Binding</p>
+               </div>
+               <div class="card-body text-center font-weight-bold display-1">
+                      <span>{{counter}}</span>
+               </div>
+               <div class="card-body bg-light ">
+                       <button type="button" class="btn btn-success " (click)="doStart()" >start</button>
+                       <button type="button" class="btn btn-success ml-2" (click)="doStop()">stop</button>
+                       <button type="button" class="btn btn-success ml-2" (click)="doReset()">reset</button>                     
+               </div>
+           </div>
+       </div>
+      <!--  <div class="col-md-4">
+            <div class="card">
+                 <div class="card-body">
+
+                 </div>
+                 <div class="card-body bg-light">
+                    <button type="button" class="btn btn-success " (mouseover)="displayDate()" >Date</button>
+                    <button type="button" class="btn btn-success ml-2" (mouseover)="displayDay()">Day</button>
+                    <button type="button" class="btn btn-success ml-2" (mouseover)="displayYear()">Year</button>  
+                 </div>
+            </div>
+       </div> -->
+     </div>
+     <div class="row">
+        <div class="col-md-4">
+           <div class="card">
+              <div class="card-header bg-success text-white font-weight-bold text-center">
+                   <span>Text Binding</span>
+              </div>
+              <div class="card-body">
+                  <input (input)="displayText($event)" type="text" class="form-control" placeholder="Enter Text Here..!"/>
+              </div>
+              <div class="card-body">
+                 {{message}}
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>

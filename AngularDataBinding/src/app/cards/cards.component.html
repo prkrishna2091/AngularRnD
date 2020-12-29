@@ -25,18 +25,24 @@
                </div>
            </div>
        </div>
-      <!--  <div class="col-md-4">
-            <div class="card">
-                 <div class="card-body">
-
-                 </div>
-                 <div class="card-body bg-light">
-                    <button type="button" class="btn btn-success " (mouseover)="displayDate()" >Date</button>
-                    <button type="button" class="btn btn-success ml-2" (mouseover)="displayDay()">Day</button>
-                    <button type="button" class="btn btn-success ml-2" (mouseover)="displayYear()">Year</button>  
-                 </div>
-            </div>
-       </div> -->
+        <div class="col-md-4">
+           <div class="card">
+              <div class="card-header bg-success text-center text-white font-weight-bold">
+                 <p class="h4">Range Bidning</p>
+              </div>
+              <div class="card-body">
+               <form>
+                  <div class="form-group">
+                    <label for="formControlRange">Range</label>
+                    <input name="range" [(ngModel)]="inputRange"  type="range" class="form-control-range" id="formControlRange" min="0" max="1000">
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer">
+                 selected Range is :{{inputRange}}
+              </div>
+           </div>
+        </div>
      </div>
      <div class="row">
         <div class="col-md-4">
@@ -49,6 +55,45 @@
               </div>
               <div class="card-body">
                  {{message}}
+              </div>
+           </div>
+        </div>
+        <div class="col-md-4">
+         <div class="card">
+              <div class="card-header bg-danger text-center text-white">
+                        <p>Show Password</p>
+              </div>
+              <div class="card-body">
+                 <div class="form-group">
+                    <input [type]="inputType" class="form-control">
+                 </div>
+               <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" (change)="showPassword()">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Show Password
+                  </label>
+                </div>
+              </div>
+              
+         </div>
+    </div> 
+        <div class="col-md-4">
+           <div class="card">
+              <div class="card-header bg-warning text-white text-center font-weight-bold">
+                  <p>SMS</p>
+              </div>
+              <div class="card-body">
+                   <form>
+                      <textarea
+                        class="form-control"
+                        name="msg"
+                        [(ngModel)]="smsMessage"
+                        maxlength="100"
+                      ></textarea>
+                   </form>
+              </div>
+              <div class="card-footer">
+                 <p>Characters Limit : {{smsMessage.length}}/100</p>
               </div>
            </div>
         </div>

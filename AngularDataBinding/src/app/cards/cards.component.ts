@@ -1,6 +1,7 @@
 import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -14,11 +15,16 @@ export class CardsComponent implements OnInit {
    counterId:number;
    isCounterStarted:boolean=false;
    message:string="";
+   smsMessage:string="";
+   inputType:string="password";
+   inputRange:number=0;
    constructor() { }
 
   ngOnInit(): void {
   }
-
+  public showPassword(){
+    (this.inputType==='password')?this.inputType='text':this.inputType='password';
+  }
   public doStart():any{
     if(!this.isCounterStarted){
       this.counterId= setInterval(()=>{

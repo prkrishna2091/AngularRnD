@@ -1,0 +1,36 @@
+<div class="nav nav-bar bg-success text-white text-center ">
+      <p class="h4 text-center">{{message}}</p>
+</div>
+<div class="container">
+<div class="row">
+    
+    <table class="table mt-5 table-borderless table-striped table-hover table-sm">
+        <thead class="thead-dark text-center">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Capital
+                </th>
+                <th>
+                    Region
+                </th>
+                <th>
+                    Flag
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of countryList" class="text-center ">
+                  <td class="table-primary">{{country.name}}</td>
+                  <td class="table-secondary">{{country.capital}}</td>
+                  <td class="table-info">{{country.region}}</td>
+                  <td><img [src]="country.flag" width="50" height="50"></td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+</div>
+</div>

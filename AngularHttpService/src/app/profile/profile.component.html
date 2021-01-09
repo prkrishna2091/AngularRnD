@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="card pt-5 m-5" *ngFor="let profile of profiles">
+        <div class="card-header bg-success text-white text-center">
+            <p class="h4">{{profile.name}}</p>
+        </div>
+        <div class="card-body bg-danger text-white text-center">
+            <p class="h2">age : {{profile.age}}</p>
+            <p class="h2">country : {{profile.country}}</p>
+        </div>
+    </div>
+</div>
